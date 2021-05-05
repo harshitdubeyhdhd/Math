@@ -1,0 +1,28 @@
+trigger: 
+- master
+
+pool:
+  vmImage: "ubuntu-latest"
+
+variables:
+#  - group: variable-group # Rename to whatever you named your variable group in the prerequisite stage of step 6
+  - name: projectKey
+    value: string
+  - name: projectName
+    value: string
+  - name: projectVersion
+    value: string
+stages:
+  - stage: Run_and_publish_unit_tests
+    variables:
+      projectKey: 'kkey'
+      projectName: 'nname'
+      projectVersion: 'version'
+    jobs:
+      - job:
+        steps:
+          - task: Configuration@1
+            inputs:
+              projectKey: 'kkey'
+              projectName: 'nname'
+              projectVersion: 'version'
