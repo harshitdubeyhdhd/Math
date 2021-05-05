@@ -5,6 +5,11 @@
 
 trigger:
 - master
+- task: Configuration@1
+  inputs:
+    projectKey: 'kkey'
+    projectName: 'nname'
+    projectVersion: 'v1.0'
 
 pool:
   vmImage: ubuntu-latest
