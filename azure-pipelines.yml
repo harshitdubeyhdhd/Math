@@ -9,7 +9,7 @@ trigger:
   inputs:
     projectKey: 'kkey'
     projectName: 'nname'
-    projectVersion: 'v1.0'
+    projectVersion: 'version'
 
 pool:
   vmImage: ubuntu-latest
